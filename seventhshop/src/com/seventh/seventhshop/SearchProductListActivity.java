@@ -9,9 +9,12 @@ import com.seventh.seventhshop.adapter.ProductLVItemAdapter;
 import com.seventh.seventhshop.bean.ProductListBean;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,8 +63,9 @@ public class SearchProductListActivity extends Activity {
 		tv_RankPrice.setOnClickListener(splaocl);
 		tv_RankGood.setOnClickListener(splaocl);
 		tv_RankTime.setOnClickListener(splaocl);
+		lvproduct.setOnItemClickListener(sploicl);
 	}
-
+	
 	private OnClickListener splaocl = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
@@ -79,9 +83,7 @@ public class SearchProductListActivity extends Activity {
 							return 1;
 						else
 							return -1;
-						
 					}
-
 				});
 				break;
 			case R.id.tv_rankprice://价格
@@ -91,20 +93,40 @@ public class SearchProductListActivity extends Activity {
 							ProductListBean rhs) {
 						double price1 = lhs.getPrice();
 						double price2 = rhs.getPrice();
-						if (price1 < price2)
-							return 1;
-						else
+						if (price1 > price2)
 							return -1;
-						
+						else
+							return 1;
 					}
-
 				});
 				break;
 			case R.id.tv_rankgood://评论
-				name = "3";
+				Collections.sort(productList,new Comparator<ProductListBean>() {
+					@Override
+					public int compare(ProductListBean lhs,
+							ProductListBean rhs) {
+						int content1 = lhs.getComment_count();
+						int content2 = rhs.getComment_count();
+						if (content1 > content2)
+							return 1;
+						else
+							return -1;
+					}
+				});
 				break;
 			case R.id.tv_ranktime://上架时间
-				name = "4";
+				Collections.sort(productList,new Comparator<ProductListBean>() {
+					@Override
+					public int compare(ProductListBean lhs,
+							ProductListBean rhs) {
+						int content1 = lhs.getComment_count();
+						int content2 = rhs.getComment_count();
+						if (content1 > content2)
+							return -1;
+						else
+							return 1;
+					}
+				});
 				break;
 			}
 			
@@ -112,8 +134,17 @@ public class SearchProductListActivity extends Activity {
 			plviaadapter.notifyDataSetChanged();
 			lvproduct.setAdapter(plviaadapter);
 
-			Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT)
-					.show();
+			//Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
+		}
+	};
+	
+	private OnItemClickListener sploicl = new OnItemClickListener(){
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			Intent intent = new Intent(getApplicationContext(), ProductDetailActivity.class);
+			intent.putExtra("id", ((ProductListBean)plviaadapter.getItem(position)).getId());
+			startActivity(intent);
 		}
 	};
 }

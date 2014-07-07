@@ -133,4 +133,29 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#ff4b4b4b</item>
     </style>
+    <style name="style_13_9F9F9F">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">#ff9f9f9f</item>
+    </style>
+    <style name="style_14_9F9F9F">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff9f9f9f</item>
+    </style>
+    <style name="style_16_C21513_BOLD">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffc21513</item>
+    </style>
+    <style name="style_14_FFFFFF">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="style_16_FFFFFF">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="style_20_666666">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
 </resources>

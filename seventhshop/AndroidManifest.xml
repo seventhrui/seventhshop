@@ -27,6 +27,7 @@
         <activity android:name="com.seventh.seventhshop.SearchProductListActivity"/>
         <activity android:name="com.seventh.seventhshop.DetailActivity"/>
         <activity android:name="com.seventh.seventhshop.MainActivity"/>
+        <activity android:name="com.seventh.seventhshop.ProductDetailActivity"/>
     </application>
 
 </manifest>

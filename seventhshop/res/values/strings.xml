@@ -21,5 +21,8 @@
     <string name="price">价格</string>
     <string name="goodDegree">评论</string>
 	<string name="groundingTime">上架时间</string>
-    
+	
+	<string name="shopcar">加购物车</string>
+	<string name="collect">收藏</string>
+    <string name="describe">商品描述</string>
 </resources>

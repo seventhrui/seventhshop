@@ -39,7 +39,7 @@ public class HotproductFragment extends Fragment {
 	 * @param c
 	 */
 	private void initView(LayoutInflater i, ViewGroup c) {
-		rootView = i.inflate(R.layout.prom_bulletin_fragment, c, false);
+		rootView = i.inflate(R.layout.fragment_prom_bulletin, c, false);
 		lv_promBulldtin = (ListView) rootView.findViewById(R.id.lv_promBulldtin);
 	}
 	private void getData(){
