@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">第柒</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    
+    <string name="please_input_product_name">请输入您要搜索的商品</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string-array name="planets_array">
+        <item>限时抢购</item>
+        <item>促销快报</item>
+        <item>新品上架</item>
+        <item>热卖单品</item>
+        <item>推荐品牌</item>
+    </string-array>
+    <string name="drawer_open">打开状态</string>
+    <string name="drawer_close">关闭状态</string>
+    
+    <string name="sales">销量</string>
+    <string name="price">价格</string>
+    <string name="goodDegree">评论</string>
+	<string name="groundingTime">上架时间</string>
+    
+</resources>

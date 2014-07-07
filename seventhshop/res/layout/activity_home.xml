@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gaotianpu.ftodo.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="39.0dip"
+            android:background="@drawable/home_search3" >
+
+            <EditText
+                android:id="@+id/et_searchinfo"
+                style="@style/style_14_4B4B4B"
+                android:layout_width="220dip"
+                android:layout_height="39.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32.0dip"
+                android:background="@android:color/transparent"
+                android:hint="@string/please_input_product_name"
+                android:maxLength="26"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/ibtn_search"
+                android:layout_width="43.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/search_selector" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            android:background="#ffffff" >
+
+            <org.taptwo.android.widget.ViewFlow
+                android:id="@+id/viewflow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </org.taptwo.android.widget.ViewFlow>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#88252525"
+                android:gravity="center" >
+
+                <org.taptwo.android.widget.CircleFlowIndicator
+                    xmlns:app="http://schemas.android.com/apk/res/com.seventh.seventhshop"
+                    android:id="@+id/viewflowindic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:padding="2dip"
+                    app:activeColor="#ff0000"
+                    app:activeType="fill"
+                    app:circleSeparation="20dip"
+                    app:inactiveColor="#ffffff"
+                    app:inactiveType="fill"
+                    app:radius="4dip" />
+            </LinearLayout>
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/home_item" />
+        <ListView
+            android:id="@+id/lv_home_type"
+            android:layout_width="fill_parent"
+            android:layout_height="229dip"
+            android:background="@color/home_item_normal"
+            android:divider="@color/home_item"
+            android:dividerHeight="1px"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</ScrollView>
